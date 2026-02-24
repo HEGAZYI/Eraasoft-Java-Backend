@@ -14,8 +14,7 @@ public class Main {
         System.out.println("Enter Student Age:");
         int age = sc.nextInt();
 
-        Student student = new Student(id , name, age);
-        student.showData();
+
 
 
     }
