@@ -1,0 +1,206 @@
+/* ============================================================
+   E-Wallet Professional Theme
+   ============================================================ */
+:root {
+    --primary: #0d6efd;
+    --primary-dark: #0a58ca;
+    --success: #198754;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --dark: #1a1d23;
+    --card-bg: #ffffff;
+    --body-bg: #f0f2f5;
+    --text: #212529;
+    --muted: #6c757d;
+    --radius: 12px;
+    --shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--body-bg);
+    color: var(--text);
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* ---- Auth pages (login / signup) ---- */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+    padding: 1.5rem;
+}
+
+.auth-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    width: 100%;
+    max-width: 420px;
+    padding: 2.5rem;
+}
+
+.auth-card .brand {
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.auth-card .brand .logo {
+    font-size: 2.5rem;
+    margin-bottom: .25rem;
+}
+
+.auth-card .brand h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--dark);
+}
+
+.auth-card .brand p {
+    color: var(--muted);
+    font-size: .9rem;
+    margin: .25rem 0 0;
+}
+
+.form-label { font-weight: 600; font-size: .875rem; }
+.form-control {
+    border-radius: 8px;
+    padding: .65rem 1rem;
+    border: 1.5px solid #dee2e6;
+    transition: border-color .2s, box-shadow .2s;
+}
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(13,110,253,.15);
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    padding: .7rem;
+    font-weight: 600;
+    transition: background .2s;
+}
+.btn-primary:hover { background: var(--primary-dark); }
+
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: .9rem;
+    color: var(--muted);
+}
+.auth-footer a { color: var(--primary); font-weight: 600; text-decoration: none; }
+.auth-footer a:hover { text-decoration: underline; }
+
+/* ---- Navbar ---- */
+.navbar-ewallet {
+    background: var(--dark) !important;
+    box-shadow: 0 2px 12px rgba(0,0,0,.15);
+}
+.navbar-ewallet .navbar-brand {
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+.navbar-ewallet .nav-link {
+    color: rgba(255,255,255,.8) !important;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: .4rem .85rem !important;
+    margin: 0 .15rem;
+    transition: background .2s, color .2s;
+}
+.navbar-ewallet .nav-link:hover,
+.navbar-ewallet .nav-link.active {
+    color: #fff !important;
+    background: rgba(255,255,255,.12);
+}
+
+/* ---- Dashboard cards ---- */
+.balance-card {
+    background: linear-gradient(135deg, #0d6efd, #6610f2);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 1.75rem 2rem;
+    box-shadow: var(--shadow);
+}
+.balance-card .label { font-size: .9rem; opacity: .85; }
+.balance-card .amount { font-size: 2.25rem; font-weight: 700; margin: .25rem 0; }
+.balance-card .user-info { font-size: .85rem; opacity: .8; }
+
+.action-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform .2s, box-shadow .2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+.action-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0,0,0,.12);
+    color: inherit;
+}
+.action-card .icon {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+.action-card h5 { font-weight: 600; margin: 0; }
+.action-card p { color: var(--muted); font-size: .85rem; margin: .35rem 0 0; }
+
+/* ---- Content cards ---- */
+.content-card {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.75rem;
+}
+
+.page-title {
+    font-weight: 700;
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+}
+
+/* ---- Tables ---- */
+.table thead th {
+    background: #f8f9fa;
+    font-weight: 600;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    border-bottom: 2px solid #dee2e6;
+}
+.table td { vertical-align: middle; font-size: .9rem; }
+
+.badge-type {
+    font-size: .75rem;
+    font-weight: 600;
+    padding: .35em .65em;
+    border-radius: 6px;
+}
+
+/* ---- Alerts ---- */
+.alert {
+    border-radius: 8px;
+    border: none;
+    font-size: .9rem;
+}
+
+/* ---- Footer ---- */
+.app-footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: var(--muted);
+    font-size: .8rem;
+}
